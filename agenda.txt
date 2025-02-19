@@ -1,0 +1,5 @@
+1. setup the repository
+    . new environment
+    . setup.py
+    . requirements.txt
+    . 
