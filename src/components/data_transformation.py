@@ -16,6 +16,7 @@ from src.utils import save_object
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path=os.path.join("artifacts","preprocessor.pkl")
+    
 
 class DataTransformation:
     '''
@@ -38,7 +39,7 @@ class DataTransformation:
             cat_pipeling=Pipeline(
                 steps=[
                     ("imputer",SimpleImputer(strategy="most_frequent")),
-                    ("ohe",OneHotEncoder())
+                    ("ohe",OneHotEncoder(handle_unknown='ignore'))
                 ]
             )
 
